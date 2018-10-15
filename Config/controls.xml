@@ -1,0 +1,5 @@
+<Controls>
+  <Bindings player="1">
+    <Command id="exampleControl" inputType="keyboard" bindedTo="A" />
+  </Bindings>
+</Controls>

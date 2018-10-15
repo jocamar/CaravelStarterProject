@@ -1,0 +1,5 @@
+﻿<Physics>
+  <Materials>
+    <ExampleMaterial density="1" friction="1" restitution="0.5" />
+  </Materials>
+</Physics>
