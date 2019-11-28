@@ -1,6 +1,7 @@
 using Caravel;
 using Caravel.Core;
 using Caravel.Core.Physics;
+using Caravel.Core.Process;
 using Microsoft.Xna.Framework;
 
 namespace MyNewGame
@@ -19,7 +20,7 @@ namespace MyNewGame
 
         protected override Cv_GameLogic VCreateGameLogic()
         {
-            return new MyNewGameLogic(this);
+            return new Cv_GameLogic(this);
         }
 
         protected override Cv_GamePhysics VCreateGamePhysics()
@@ -29,7 +30,7 @@ namespace MyNewGame
 
         protected override Cv_GameView[] VCreateGameViews()
         {
-            var pv = new Cv_PlayerView(PlayerIndex.One, Vector2.One, Vector2.Zero);
+            var pv = new Cv_PlayerView(Cv_Player.One, Vector2.One, Vector2.Zero);
             return new Cv_GameView[] { pv };
         }
 
@@ -45,11 +46,16 @@ namespace MyNewGame
 
         protected override bool VInitialize()
         {
+            //Logic.ChangeState(Cv_GameLogic.Cv_GameState.LoadingScene);
             return true;
         }
 
         protected override bool VLoadGame()
         {
+            /*
+            var loadProcess = new Cv_LoadSceneProcess("Some Scene", "Default", "Scene Name Here");
+            ProcessManager.AttachProcess(loadProcess);
+            */
             return true;
         }
     }

@@ -1,11 +1,14 @@
-<CaravelProject name="YourGameName">
+<CaravelProject name="MyNewGame">
     <ResourceBundles>
         <Bundle name="Default" file="Assets.zip"/>
     </ResourceBundles>
     <Materials materialsFile="Config/physics.xml"/>
     <Controls bindingsFile="Config/controls.xml"/>
     <Scripts preInitScript="" preInitScriptBundle="Default" />
+    <Components descriptionFile="Editor/components.xml" />
     <Strings>
         <Language id="English" stringsFile="Config/englishStrings.xml" />
     </Strings>
+    <StartupProject file="GameProject.csproj"/>
+    <OutputFolder path="bin"/>
 </CaravelProject>
