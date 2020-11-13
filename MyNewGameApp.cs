@@ -20,6 +20,7 @@ namespace MyNewGame
 
         protected override Cv_GameLogic VCreateGameLogic()
         {
+            //You can inherit from this class if you want to override some of the methods but most times just the base game logic is fine
             return new Cv_GameLogic(this);
         }
 
@@ -30,6 +31,7 @@ namespace MyNewGame
 
         protected override Cv_GameView[] VCreateGameViews()
         {
+            //Create a default player view that occupies the entire screen starting at pos 0,0
             var pv = new Cv_PlayerView(Cv_Player.One, Vector2.One, Vector2.Zero);
             return new Cv_GameView[] { pv };
         }
@@ -46,16 +48,16 @@ namespace MyNewGame
 
         protected override bool VInitialize()
         {
-            //Logic.ChangeState(Cv_GameLogic.Cv_GameState.LoadingScene);
+            //Do any loading and initialization logic here then send the game to load state
+            Logic.ChangeState(Cv_GameLogic.Cv_GameState.LoadingScene);
             return true;
         }
 
         protected override bool VLoadGame()
         {
-            /*
-            var loadProcess = new Cv_LoadSceneProcess("Some Scene", "Default", "Scene Name Here");
+            //Load our first scene
+            var loadProcess = new Cv_LoadSceneProcess("testScene.cvs", "Default", "Example Scene");
             ProcessManager.AttachProcess(loadProcess);
-            */
             return true;
         }
     }

@@ -1,0 +1,36 @@
+﻿<Scene vWidth="1920" vHeight="1080">
+  <StaticEntities>
+    <Entity name="Root" type="" visible="True">
+      <Entity name="ExampleSprite" type="" visible="True">
+        <Cv_TransformComponent>
+          <Position x="0" y="0" z="0" />
+          <Rotation radians="0" />
+          <Scale x="1" y="1" />
+          <Origin x="0.5" y="0.5" />
+        </Cv_TransformComponent>
+        <Cv_SpriteComponent>
+          <Color r="255" g="255" b="255" a="195" />
+          <Visible status="True" />
+          <Size width="200" height="200" />
+          <Parallax value="1" />
+          <Texture resource="icon.png" />
+          <Animation fx="1" fy="1" loop="False" />
+          <Mirrored status="False" />
+          <OnEndScript resource="" />
+        </Cv_SpriteComponent>
+      </Entity>
+      <Entity name="Camera" type="" visible="True">
+        <Cv_TransformComponent>
+          <Position x="0" y="0" z="0" />
+          <Rotation radians="0" />
+          <Scale x="1" y="1" />
+          <Origin x="0.5" y="0.5" />
+        </Cv_TransformComponent>
+        <Cv_CameraComponent>
+          <Properties defaultCamera="True" zoom="1" />
+        </Cv_CameraComponent>
+      </Entity>
+    </Entity>
+  </StaticEntities>
+  <Script preLoad="" postLoad="" unLoad="" />
+</Scene>

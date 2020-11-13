@@ -59,6 +59,12 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Content Include="Assets\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\testScene.cvs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="CaravelDotNet.dll" />
     <Content Include="Editor\components.xml">
       <SubType>Designer</SubType>
